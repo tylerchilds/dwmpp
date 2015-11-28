@@ -28,9 +28,7 @@ layout: none
 			<itunes:email>{{ site.email }}</itunes:email>
 		</itunes:owner>
 		<itunes:image href="http://cdn.tychi.me/dwmpp/itunes.png" />
-		<itunes:category text="TV &amp; Film">
-			<itunes:category text="Design" />
-		</itunes:category>
+		<itunes:category text="TV &amp; Film" />
 		<itunes:category text="Arts">
 			<itunes:category text="Literature" />
 		</itunes:category>
