@@ -10,7 +10,8 @@ title: Dude, Where's My Podcast? Podcast
 email: tylerwchilds@gmail.com
 description: >
   The Dude, Where's My Podcast? Podcast is a pop-culture blog
-  that was founded in 2005 or 2006. We really don't remember.
+  that was founded in 2006, by two high school guys. They're older
+  now and it's unclear whether they'll ever make another episode
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://dwmpp.tylerchilds.com" # the base hostname & protocol for your site
 
