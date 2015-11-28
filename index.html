@@ -1,36 +1,46 @@
 ---
 layout: default
-title: Hi there
+title: Dude, Where's my Podcast?
 permalink: /
 ---
 
-<header>
-  <h1>{{ page.title }}</h1>
-</header>
-
 <article>
-  <p>Bit Podcast is an ongoing series about games, design & development from the mouths of <a href="http://twitter.com/DavidDarnes" title="David Darnes">@DavidDarnes</a> and <a href="http://twitter.com/BenjaminReid" title="Benjamin Reid">@BenjaminReid</a>.</p>
+  <p>Call it the long con. Call it a fluke. Call it whatever you'd like, but we found your podcast after ten years and it's back.</p>
 </article>
 
 {% for post in paginator.posts %}
 <article>
-  <h2>
-    <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
-      {{ post.title }}
-    </a>
-  </h2>
-  <p>{{ post.excerpt }}</p>
-  {% if post.file %}
-  <audio src="{{ post.file }}" preload="auto" controls="controls" type="audio/mp3">
-    Your browser doesn't support the <code>audio</code> element.
-  </audio>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <div class="post-meta">
+          <div class="post-date">
+            <span class="post-month">{{ post.date | date: "%b" }}</span>
+            <span class="post-day">{{ post.date | date: "%-d" }}</span>
+            <span class="post-year">{{ post.date | date: "%Y" }}</span>
+          </div>
+        </div>
 
-  <a href="{{ post.file }}" class="button">Download</a>
-  {% endif %}
+        <h3>
+          <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+            {{ post.title }}
+          </a>
+        </h3>
+        <p>{{ post.excerpt }}</p>
+        {% if post.file %}
+          <audio src="{{ post.file }}" preload="auto" controls="controls" type="audio/mp3">
+            Your browser doesn't support the <code>audio</code> element.
+          </audio>
 
-  {% if post.soundcloud %}
-  {{ post.soundcloud }}
-  {% endif %}
+          <a href="{{ post.file }}" class="button">Download</a>
+        {% endif %}
+
+        {% if post.soundcloud %}
+          {{ post.soundcloud }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
 </article>
 {% endfor %}
 
