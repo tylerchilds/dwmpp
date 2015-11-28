@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Dude, Where's My Podcast?
+title: Dude, Where's My Podcast? Podcast
 email: tylerwchilds@gmail.com
 description: >
   The Dude, Where's My Podcast? Podcast is a pop-culture blog
@@ -17,3 +17,5 @@ url: "http://dwmpp.tylerchilds.com" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+lang: en
