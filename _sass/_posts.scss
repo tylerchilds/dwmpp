@@ -1,14 +1,12 @@
 .post-list{
-	list-style-type: none;
-	margin-left: 0;
-
 	@media  screen and (min-width: 768px){
 		padding-left: 65px;
 	}
+}
 
-	li{
-		position: relative;
-	}
+.post{
+	position: relative;
+	padding-bottom: 34px;
 }
 
 .post-date{
@@ -54,4 +52,8 @@
 		font-size: 1.8rem;
 		font-weight: bold;
 	}
+}
+
+audio{
+	margin-bottom: 13px;
 }

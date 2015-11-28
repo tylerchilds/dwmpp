@@ -13,15 +13,7 @@ description: >
   that was founded in 2005 or 2006. We really don't remember.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://dwmpp.tylerchilds.com" # the base hostname & protocol for your site
-paginate: 4
 
 # Build settings
 markdown: kramdown
 permalink: pretty
-
-# Jekyll plugins
-gems:
-- jekyll-mentions
-- jekyll-redirect-from
-
-jekyll-mentions: https://twitter.com
