@@ -7,41 +7,35 @@ body{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	min-height: 100%;
-
-	@media screen and (min-width: 960px){
-		padding-top: 66px;
-	}
 }
 
 header{
-	background-color: $blue;
+	background-color: $yellow;
 	color: #fff;
 	padding: 13px;
 	line-height: 40px;
 	overflow: hidden;
 	text-align: right;
+	height: 80vh;
+	word-spacing: 100vw;
+	text-align: left;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
 
-	@media screen and (min-width: 768px){
-		padding: 13px 21px;
-	}
-
-	@media screen and (min-width: 960px){
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-		z-index: 2;
+	@media screen and (max-width: 767px){
+		height: 70vh;
 	}
 
 	h1{
-		float: left;
-		font-size: 24px;
-		padding-right: 13px;
-		padding-bottom: 0;
-		line-height: 40px;
+		padding: 0 0 5vh 30vw;
+		font-size: 10vmin;
+		line-height: 12vmin;
+		color: $brown;
+		margin-top: -5vh;
 
-		@media screen and (min-width: 768px){
-			padding-right: 21px;
+		@media screen and (max-width: 767px){
+			margin-top: 0;
 		}
 
 		img{
@@ -50,65 +44,64 @@ header{
 			padding-bottom: 0;
 			height: 40px;
 		}
-	}
 
-	.tagline{
-		display: none;
-		float: left;
-		padding-top: 0;
-		padding-bottom: 0;
-		font-family: $body;
-		font-weight: normal;
-		font-size: $font-size +3;
-		line-height: 40px;
-		margin-right: 21px;
-
-		@media screen and (min-width: 960px){
-			display: inline-block;
+		&:before{
+			position: absolute;
+			width: 10vw;
+			left: -48vw;
+			top: -100vh;
+			bottom: -100vh;
+			z-index: 25;
+			box-shadow: 0 0 0 0 transparent,
+				0vw 0 0 0 $brown,
+				9.9vw 0 0 0 $brown,
+				18.8vw 0 0 0 $brown,
+				27.7vw 0 0 0 $brown,
+				36.6vw 0 0 0 $brown,
+				45.5vw 0 0 0 $brown,
+				54.4vw 0 0 0 $red,
+				63.3vw 0 0 0 $orange;
+			content: '';
 		}
-	}
-
-	nav{
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		display: inline-block;
-		margin: 0 auto;
-		clear: both;
-
-		@media screen and (min-width: 768px){
-			float: right;
-			display: block;
-			clear: none;
-		}
-
-		a{
-			padding: 5px 8px;
-			border-radius: 2px;
-
-			@media screen and (min-width: 768px){
-				padding: 34px 13px;
-			}
-		}
-
-
 	}
 
 	a:link{
-		color: $white;
+		color: $brown;
 		text-decoration: none;
 	}
 
 	a:visited{
-		color: $white;
+		color: $brown;
 	}
 
 	a:hover,
 	a:focus{
-		color: $gray5;
+		color: $orange;
 	}
 
 	a:active{
-		color: $white;
+		color: $primary;
+	}
+}
+
+.slant{
+	transform: rotate(-30deg);
+}
+.end-slant{
+	background: $primary;
+	width: 600vw;
+	height: 600vh;
+	position: absolute;
+	left: -300vw;
+	z-index: 50;
+	font-size: 25vmin;
+	color: $yellow;
+	text-align: center;
+	padding-top: 2vh;
+	padding-left: 60vmax;
+
+	@media screen and (max-width: 767px){
+		padding-left: 20vmax;
 	}
 }
 
@@ -197,7 +190,7 @@ header{
 .button{
   display: inline-block;
   padding: 13px 34px;
-  background-color: $orange;
+  background-color: $secondary;
   font-size: 1.4rem;
 	margin-bottom: 10px;
 
@@ -207,7 +200,7 @@ header{
   }
 
   &:hover{
-    background-color: darken($orange, 2%);
+    background-color: darken($secondary, 2%);
   }
 }
 

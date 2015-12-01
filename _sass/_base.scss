@@ -105,7 +105,7 @@ h6{
 }
 
 a:link{
-	color: $blue;
+	color: $primary;
 	text-decoration: underline;
 }
 
@@ -115,11 +115,11 @@ a:visited{
 
 a:hover,
 a:focus{
-	color: $blue-dark;
+	color: $primary-dark;
 }
 
 a:active{
-	color: $blue-light;
+	color: $primary-light;
 }
 
 img{
@@ -279,7 +279,7 @@ table{
 	}
 
 	thead{
-		background-color: $blue;
+		background-color: $primary;
 		color: $white;
 	}
 
