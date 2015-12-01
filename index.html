@@ -1,11 +1,10 @@
 ---
 layout: default
 title: Dude, Where's my Podcast?
-permalink: /
 ---
 
 <article class="post-list">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <div class="post">
       <div class="post-meta">
         <div class="post-date">
@@ -35,3 +34,13 @@ permalink: /
     </div>
   {% endfor %}
 </article>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">&lt; Older Posts</a>
+  {% endif %}
+
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Newer Posts &gt; </a>
+  {% endif %}
+</div>

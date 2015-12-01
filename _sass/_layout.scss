@@ -143,6 +143,23 @@ header{
   }
 }
 
+.pagination{
+	overflow: hidden;
+	clear: both;
+
+	a{
+		display: inline-block;
+	}
+
+	.next{
+		float: left;
+	}
+
+	.previous{
+		float: right;
+	}
+}
+
 footer{
 	overflow: hidden;
 	max-width: 960px;
